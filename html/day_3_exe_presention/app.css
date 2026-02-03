@@ -1,0 +1,19 @@
+
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: silver;
+    
+}
+div{
+    width: 100vw;
+    height: 100vh;
+    margin: 2%;
+    background: yellow;
+    border: 1px solid ;
+}
+h1{
+    color: green;
+}

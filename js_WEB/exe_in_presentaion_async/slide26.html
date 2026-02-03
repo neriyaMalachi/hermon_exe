@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Callback Hell Exercise</title>
+  </head>
+
+  <body>
+
+    <script>
+      let num = Math.floor(Math.random() * 100);
+
+      console.log("Initial number:", num);
+
+      setTimeout(() => {
+        num = num + 1;
+        console.log("After +1:", num);
+
+        setTimeout(() => {
+          num = num / 5;
+          console.log("After /5:", num);
+
+          setTimeout(() => {
+            num = num * 6;
+            console.log("After *6:", num);
+
+            setTimeout(() => {
+              num = Math.pow(num, 3);
+              console.log("After power of 3:", num);
+            }, 5000);
+          }, 5000);
+        }, 5000);
+      }, 5000);
+    </script>
+  </body>
+</html>

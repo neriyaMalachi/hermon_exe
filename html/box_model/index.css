@@ -1,0 +1,23 @@
+.a {
+  
+  background-color: yellow;
+  width: 400px;
+  height: 70px;
+  border-radius: 20px;
+  padding-top: 20%;
+}
+.b1 {
+  background-color: red;
+  margin: 5%;
+  padding-left: 20%;
+  padding-bottom: 5%;
+  padding-right: 20%;
+  border-radius: 20px;
+}
+.b2 {
+  background-color: blue;
+  margin-left: 20%;
+  padding: 10% 10%;
+  border-radius: 20px;
+
+}

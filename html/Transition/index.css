@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background: steelblue;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.translate {
+  transform: translate(100px, 10px);
+}
+/* deg זה יחידה של מעלות */
+.rotate {
+  transform: rotate(60deg);
+}
+
+.scale {
+  transform: scale(1.5);
+}
+
+.skew {
+  transform: skew(30deg);
+}

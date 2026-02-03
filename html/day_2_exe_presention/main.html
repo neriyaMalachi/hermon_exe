@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms + Emmet Summary</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Forms + Emmet (Summary Page)</h1>
+      <p>
+        This page demonstrates forms, inputs, radio/checkbox/select, labels,
+        required fields and Emmet usage.
+      </p>
+      <hr />
+    </header>
+
+    <main>
+      <section>
+        <h2>Contact Us Form</h2>
+
+        <form action="/submit" method="POST">
+          <div>
+            <label for="fullName">Full name</label><br />
+            <input
+              id="fullName"
+              name="fullName"
+              type="text"
+              placeholder="Type your full name"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="email">Email</label><br />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="password">Password</label><br />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              minlength="6"
+              placeholder="At least 6 characters"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="age">Age</label><br />
+            <input id="age" name="age" type="number" min="1" max="120" />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="satisfaction">Satisfaction (1-10)</label><br />
+            <input
+              id="satisfaction"
+              name="satisfaction"
+              type="range"
+              min="1"
+              max="10"
+              value="7"
+            />
+          </div>
+
+          <br />
+
+          <fieldset>
+            <legend>Preferred contact method (radio)</legend>
+
+            <label>
+              <input type="radio" name="contactMethod" value="email" checked />
+              Email
+            </label>
+
+            <label>
+              <input type="radio" name="contactMethod" value="phone" />
+              Phone
+            </label>
+
+            <label>
+              <input type="radio" name="contactMethod" value="whatsapp" />
+              WhatsApp
+            </label>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Topics (checkbox)</legend>
+
+            <label>
+              <input type="checkbox" name="topics" value="pricing" />
+              Pricing
+            </label>
+
+            <label>
+              <input type="checkbox" name="topics" value="support" />
+              Support
+            </label>
+
+            <label>
+              <input type="checkbox" name="topics" value="partnership" />
+              Partnership
+            </label>
+          </fieldset>
+
+          <br />
+
+          <div>
+            <label for="city">City</label><br />
+            <select id="city" name="city" required>
+              <option value="">-- choose --</option>
+              <option value="jerusalem">Jerusalem</option>
+              <option value="tel_aviv">Tel Aviv</option>
+              <option value="haifa">Haifa</option>
+            </select>
+          </div>
+
+          <br />
+
+          <div>
+            <label for="channels">Where did you hear about us?</label><br />
+            <select id="channels" name="channels" multiple size="4">
+              <option value="google">Google</option>
+              <option value="friend">Friend</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">TikTok</option>
+            </select>
+          </div>
+
+          <br />
+
+          <div>
+            <label for="fileUpload">Upload files</label><br />
+            <input id="fileUpload" name="fileUpload" type="file" multiple />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+          </div>
+
+          <br />
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Emmet shortcuts summary</h2>
+
+        <ul>
+          <li><code>div</code> → create tag</li>
+          <li><code>p*3</code> → multiple tags</li>
+          <li><code>section#about</code> → id</li>
+          <li><code>article.card.main</code> → classes</li>
+          <li><code>main>section>h2+p</code> → nesting</li>
+          <li><code>form>label+input:text+button:submit</code></li>
+          <li><code>lorem / lorem10</code> → dummy text</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>HTML only demo. No backend connected.</p>
+    </footer>
+  </body>
+</html>

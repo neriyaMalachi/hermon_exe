@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 50%;
+}
+
+.box {
+  min-width: 100px;
+  height: 100px;
+  background: steelblue;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2.5s ease;
+  /* transition-delay: 1.5s; */
+}
+.box:hover {
+  background-color: yellow;
+}
+.box1 {
+  order: 3;
+}
+.box2 {
+  order: 1;
+}
+.box3 {
+  order: 2;
+}

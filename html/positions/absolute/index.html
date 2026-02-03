@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box absolute">Absolute no normal in the flow</div>
+    <div>ABSOLUTE normal</div>
+
+
+    <style>
+      .box {
+        width: 120px;
+        height: 120px;
+        background: pink;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+      body{
+        height: 10000px;
+      }
+    </style>
+  </body>
+</html>

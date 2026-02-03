@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Selectors Demo</title>
+  </head>
+  <body>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Voluptates error fuga optio excepturi!</li>
+      <li>Quos quidem ipsum molestiae ex?</li>
+      <li>Totam rerum esse doloribus sequi?</li>
+      <li>Cum ut ratione ducimus alias!</li>
+      <li>Quae consequuntur placeat ea sequi.</li>
+      <li>Natus odit est corrupti quae.</li>
+      <li>Nulla illo quas sequi nemo?</li>
+      <li>Sequi quasi laudantium distinctio ea!</li>
+      <li>Dolorem doloribus consequatur perspiciatis beatae.</li>
+    </ul>
+
+    <div>
+      <h2>this is child</h2>
+    </div>
+
+    <ol>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Natus tempora qui officia minus.</li>
+      <li>Perferendis soluta aliquam cupiditate maiores?</li>
+      <li>Expedita consectetur quae nihil cupiditate?</li>
+      <li>Corrupti in aspernatur labore tenetur.</li>
+      <li>Iusto velit quam quae tempore?</li>
+      <li>Quis libero excepturi quibusdam illum!</li>
+      <li>Ducimus veniam modi molestias laboriosam?</li>
+      <li>Quo quod id beatae nam.</li>
+      <li>Qui modi natus libero excepturi.</li>
+    </ol>
+
+    <div class="defDiv">
+      <h2 class="defh">Lorem ipsum dolor sit amet consectetur.</h2>
+    </div>
+
+    <div>
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure alias necessitatibus, explicabo porro magni ea autem
+        debitis veniam dignissimos aperiam minima id a blanditiis saepe? Quae error repellendus blanditiis illo?
+      </h1>
+    </div>
+
+    <style>
+      ul li:first-child {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      .defh::before {
+        content: "before ";
+        color: #7c3aed;
+        size: 100px;
+      }
+
+      .defh::after {
+        content: " after";
+        color: #22c55e;
+      }
+
+      h2::first-letter {
+        font-size: 52px;
+        color: #0f172a;
+      }
+
+      div h2::first-line {
+        color: #7c3aed;
+        font-style: italic;
+        background-color: #f5f3ff;
+      }
+
+
+      h2:only-child {
+        background-color: #fff7ed;
+        font-size: 18px;
+      }
+
+      ol li:nth-of-type(even) {
+        color: #2563eb;
+      }
+    </style>
+  </body>
+</html>

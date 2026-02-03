@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="name" id="name" />
+    <input type="email" placeholder="email" id="email" />
+    <input type="password" placeholder="password" id="password" />
+    <input type="date" placeholder="date" id="date" />
+
+    <button id="sub">click</button>
+    <script>
+      const but = document.getElementById("sub");
+      but.addEventListener("click", () => {
+        const name = document.getElementById("name");
+        console.log(name.value);
+        const email = document.getElementById("email");
+        console.log(email.value);
+        const password = document.getElementById("password");
+        console.log(password.value);
+        const date = document.getElementById("date");
+        console.log(date.value);
+      });
+    </script>
+  </body>
+</html>

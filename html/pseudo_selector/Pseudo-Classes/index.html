@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pseudo Classes Practice</title>
+  </head>
+
+  <body>
+    <h1>תרגול Pseudo-Classes</h1>
+
+    <form>
+      <label>
+        אימייל (חובה):
+        <input type="email" required placeholder="example@email.com" />
+      </label>
+
+      <br /><br />
+
+      <label>
+        סיסמה (לפחות 6 תווים):
+        <input type="password" minlength="6" required />
+      </label>
+
+      <br /><br />
+
+      <label>
+        <input type="checkbox" />
+        אני מאשר את תנאי השימוש
+      </label>
+
+      <br /><br />
+
+      <button type="submit">שלח</button>
+    </form>
+    <hr />
+    <p>
+      <a href="https://example.com" target="_blank">קישור לדוגמה</a>
+    </p>
+
+    <style>
+      body {
+        padding: 20px;
+      }
+
+      input:invalid {
+        border: 2px solid red;
+        border-radius: 3px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: darkblue;
+        color: white;
+        cursor: pointer;
+      }
+
+      a {
+        color: blue;
+        background-color: transparent;
+      }
+
+      a:visited {
+        color: purple;
+        font-family: "Courier New", monospace;
+      }
+
+      input[type="checkbox"]:checked {
+        outline: 1px solid green;
+      }
+    </style>
+  </body>
+</html>

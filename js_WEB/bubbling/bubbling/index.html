@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Bubbling Problem</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 300px;
+        background: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        width: 150px;
+        height: 150px;
+        background: coral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 60vh;
+      }
+      .grandfather {
+        width: 150px;
+        height: 150px;
+        background: coral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        top: 120vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandfather" id="grandfather">
+      grandfather
+
+      <div class="parent" id="parent">
+        PARENT
+        <div class="child" id="child">CHILD</div>
+      </div>
+    </div>
+
+    <script>
+      const parent = document.getElementById("parent");
+      const child = document.getElementById("child");
+      const grandfather = document.getElementById("grandfather");
+
+      grandfather.addEventListener("click", () => {
+        console.log("grandfather CLICKED");
+      });
+
+      parent.addEventListener("click", () => {
+        console.log("PARENT CLICKED");
+        event.stopPropagation();
+      });
+
+      child.addEventListener("click", () => {
+        console.log("CHILD CLICKED");
+      });
+    </script>
+  </body>
+</html>

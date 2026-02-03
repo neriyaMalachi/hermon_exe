@@ -1,0 +1,12 @@
+{
+  "name": "project-hermon-kodkod-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ClosureAndFactory.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+.box {
+  width: 150px;
+  height: 100px;
+  background: lightblue;
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}

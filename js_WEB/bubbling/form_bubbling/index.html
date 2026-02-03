@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Bubbling Problem</title>
+    <style>
+      form {
+        width: 300px;
+        padding: 20px;
+        border: 2px solid black;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" placeholder="Your name" />
+
+      <button type="button" id="modeBtn">Change Mode</button>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+      const modeBtn = document.getElementById("modeBtn");
+
+      form.addEventListener("submit", () => {
+        event.preventDefault()
+
+        console.log("FORM SUBMITTED");
+      });
+
+      modeBtn.addEventListener("click", () => {
+        event.preventDefault()
+        console.log("MODE CHANGED");
+      });
+    </script>
+  </body>
+</html>

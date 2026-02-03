@@ -1,0 +1,30 @@
+.box {
+  width: 100px;
+  height: 50px;
+  background: steelblue;
+  color: white;
+  margin: 10px;
+  line-height: 50px;
+  text-align: center;
+  transition: width 4s;
+}
+
+.box:hover {
+  width: 400px;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.easein {
+  transition-timing-function: ease-in;
+}
+
+.easeout {
+  transition-timing-function: ease-out;
+}
+
+.easeinout {
+  transition-timing-function: ease-in-out;
+}

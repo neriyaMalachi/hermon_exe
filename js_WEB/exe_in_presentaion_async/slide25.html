@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Callback Hell Exercise</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .box {
+        width: 300px;
+        height: 150px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        transition: all 0.5s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" id="box">Waiting...</div>
+
+    <script>
+      const box = document.getElementById("box");
+
+      setTimeout(() => {
+        box.style.backgroundColor = "red";
+
+        setTimeout(() => {
+          box.style.fontSize = "50px";
+
+          setTimeout(() => {
+            box.style.backgroundColor = "purple";
+
+            setTimeout(() => {
+              box.innerText = "callback hell";
+            }, 5000);
+          }, 5000);
+        }, 5000);
+      }, 5000);
+    </script>
+  </body>
+</html>

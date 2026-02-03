@@ -1,0 +1,21 @@
+.box {
+  width: 150px;
+  height: 80px;
+  background: gray;
+  color: white;
+  line-height: 80px;
+  text-align: center;
+  margin: 10px;
+}
+
+.timing {
+  background: green;
+  transition: width 3s ease-in-out 1s,
+  background-color 3s ease-in 1s;
+}
+
+.timing:hover {
+  width: 300px;
+  background-color: yellow;
+}
+

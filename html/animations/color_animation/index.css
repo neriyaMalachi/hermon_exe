@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: steelblue;
+  animation: cheng_color_Box 3s ease-in-out infinite;
+}
+
+@keyframes cheng_color_Box {
+  0% {
+    background: rgb(0, 0, 0);
+  }
+
+  50% {
+    background: orange;
+  }
+
+  100% {
+    background: steelblue;
+  }
+}

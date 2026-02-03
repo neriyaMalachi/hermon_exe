@@ -1,0 +1,84 @@
+import express from "express";
+import "dotenv/config";
+import { connectMongo } from "./DB/connection.js";
+
+const app = express();
+app.use(express.json());
+const PORT = process.env.PORT || 8000;
+
+const db = await connectMongo({
+  uri: process.env.MONGO_URI,
+  dbName: process.env.DB_NAME,
+});
+
+app.get("/", async (req, res) => {
+  res.json({ ok: true, msg: "API is running" });
+});
+
+app.post("/users", async (req, res) => {
+  const result = await db.collection("users").insertOne(req.body);
+  res.json({ id: result.insertedId });
+});
+
+app.get("/users", async (req, res) => {
+  const users = await db.collection("users").find().toArray();
+  res.json(users);
+});
+
+app.get("/users/:name", async (req, res) => {
+  const user = await db.collection("users").findOne({ name: req.params.name });
+  if (!user) return res.status(404).json({ error: "User not found" });
+  res.json(user);
+});
+
+app.put("/users/:name", async (req, res) => {
+  await db
+    .collection("users")
+    .updateOne({ name: req.params.name }, { $set: req.body });
+  res.json({ message: "User updated" });
+});
+
+
+app.put("/users/fix-underage", async (req, res) => {
+  const result = await db.collection("users").updateMany(
+    { age: { $lt: 18 } },     
+    { $set: { age: 19 } }    
+  );
+
+  res.json({
+    message: "Updated all users with age < 18 to age = 19",
+    matched: result.matchedCount,
+    modified: result.modifiedCount,
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+app.delete("/users/:name", async (req, res) => {
+
+  await db.collection("users").deleteOne({
+    name: req.params.name,
+  });
+  res.json({ message: "User deleted" });
+});
+
+app.get("/users/older-than/:age", async (req, res) => {
+  const minAge = Number(req.params.age);
+
+  const users = await db.collection("users").find({ age: { $gt: minAge }, }).toArray();
+  res.json({ count: users.length, users });
+});
+
+
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
