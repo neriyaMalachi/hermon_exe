@@ -8,6 +8,7 @@ function App() {
         <p>זה תוכן שנמצא בתוך Card</p>
         <button>כפתור</button>
       </Card>
+      the app space
     </div>
   );
 }

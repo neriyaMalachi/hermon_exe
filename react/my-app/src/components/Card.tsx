@@ -12,6 +12,7 @@ function Card({ children }) {
       }}
     >
       {children}
+
     </div>
   );
 }
