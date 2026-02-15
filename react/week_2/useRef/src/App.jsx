@@ -35,29 +35,26 @@
 
 //   return (
 //     <div>
-//       <h2>Ref count: {countRef.current}</h2>
+//        <h2>Ref count: {countRef.current}</h2>
 //       <button onClick={handleClick}>Increase</button>
 //     </div>
 //   );
 // }
 
 // export default App;
-
-import { useRef, useState } from "react";
+import David from "./david";
 
 export default function App() {
-  const count = useRef(0);
-  const [username, setUsename] = useState("");
+  let count = 0;
   function handleClick() {
-    count.current++;
-    console.log(count.current);
+    count++;
+    console.log(count);
   }
 
   return (
     <>
+      <David />
       <button onClick={handleClick}>Click</button>
-      {username}
-      <input type="text" onChange={(e) => setUsename(e.target.value)} />
     </>
   );
 }
