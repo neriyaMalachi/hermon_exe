@@ -1,0 +1,150 @@
+.page {
+  font-family: Arial;
+  padding: 20px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.toggle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.notice {
+  background: #fff7d6;
+  border: 1px solid #f2d28c;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 10px 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+}
+
+.soldOut {
+  opacity: 0.55;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.badge {
+  font-size: 12px;
+  background: #111827;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.info {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #374151;
+}
+
+.stock {
+  color: #6b7280;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  background: #111827;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  filter: brightness(0.92);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.summary {
+  margin-top: 18px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.summary h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.empty {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.clear {
+  margin-top: 10px;
+  width: 100%;
+  background: #2563eb;
+}

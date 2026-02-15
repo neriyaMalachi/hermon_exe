@@ -1,0 +1,123 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  background: #f3f4f6;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.addBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  width: 260px;
+}
+
+button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #111827;
+  color: white;
+}
+
+button:hover {
+  filter: brightness(0.92);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: #2563eb;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.leader {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.muted {
+  text-align: center;
+  color: #6b7280;
+  margin: 14px 0 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opt {
+  font-weight: 700;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.votes {
+  color: #6b7280;
+}

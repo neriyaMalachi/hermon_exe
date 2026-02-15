@@ -1,0 +1,82 @@
+/* src/components/ThreatRow/ThreatRow.css */
+.actor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actor__img {
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.actor__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.actor__name {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.actor__sub {
+  font-size: 13px;
+  opacity: 0.72;
+}
+
+.muted {
+  opacity: 0.85;
+}
+
+.attacks {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.attacks__btn {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e9eefc;
+  cursor: pointer;
+}
+
+.attacks__count {
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.badge--active {
+  background: rgba(0, 255, 140, 0.10);
+  border-color: rgba(0, 255, 140, 0.25);
+}
+
+.badge--quiet {
+  background: rgba(255, 210, 0, 0.10);
+  border-color: rgba(255, 210, 0, 0.25);
+}
+
+.badge--arrested {
+  background: rgba(0, 160, 255, 0.10);
+  border-color: rgba(0, 160, 255, 0.25);
+}
+
+.badge--dead {
+  background: rgba(255, 80, 80, 0.12);
+  border-color: rgba(255, 80, 80, 0.25);
+}

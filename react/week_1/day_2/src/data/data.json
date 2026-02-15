@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "yossi",
+        "age": 10,
+        "address": "emanuel"
+    },
+    {
+        "id": 2,
+        "name": "lerer",
+        "age": 10,
+        "address": "tel aviv"
+    },
+    {
+        "id": 3,
+        "name": "moti",
+        "age": 220,
+        "address": "beni brack"
+    },
+    {
+        "id": 4,
+        "name": "yair",
+        "age": 10,
+        "address": "bet shemesh"
+    }
+]

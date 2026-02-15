@@ -1,0 +1,67 @@
+/* src/components/Filters/Filters.css */
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+.filters__input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e9eefc;
+  outline: none;
+  font-size: 16px;
+}
+
+.filters__group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.filters__label {
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.filters__number,
+.filters__select {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e9eefc;
+  outline: none;
+  font-size: 15px;
+}
+
+.filters__btn {
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.25);
+  color: #e9eefc;
+  cursor: pointer;
+  font-size: 15px;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.filters__btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filters__btn.is-active {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+}

@@ -1,0 +1,18 @@
+#home {
+  display: none;
+  background-color: rgb(160, 135, 222);
+  width: 80vw;
+  height: 80vh;
+}
+#side {
+  display: block;
+  background-color: burlywood;
+  width: 80vw;
+  height: 80vh;
+}
+#mendi {
+  display: none;
+  background-color: rgb(250, 254, 12);
+  width: 80vw;
+  height: 80vh;
+}
