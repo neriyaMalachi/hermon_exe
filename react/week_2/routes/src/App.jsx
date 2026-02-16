@@ -12,10 +12,8 @@ function App() {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="oun" element={<Oun />} />
-        <Route element={<Login />}>
-          <Route path="file1" element={<File1 />} />
-          <Route path="pay" element={<PayPage />} />
-        </Route>
+        <Route path="file1" element={<File1 />} />
+        <Route path="pay" element={<PayPage />} />
         <Route path="ner">
           <Route index element={<Oun />} />
           <Route path="tow" element={<Tow />} />
