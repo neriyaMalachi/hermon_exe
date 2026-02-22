@@ -4,14 +4,13 @@ import { NeriyaAuth } from "../context/AuthProvider";
 
 function Login() {
   const navigate = useNavigate()
-  const {setName,name} = useContext(NeriyaAuth)
+  const {setName} = useContext(NeriyaAuth)
   return (
     <div>
       Login
       <input type="text" onChange={(e) => setName(e.target.value)} />
       <button
         onClick={() => {
-          localStorage.setItem("token", name);
           navigate("/contact")
         }}
       >

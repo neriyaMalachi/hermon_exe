@@ -1,13 +1,13 @@
-import {  useEffect } from "react";
+import {  useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NeriyaAuth } from "../context/AuthProvider";
 
 function Contact() {
   const navigate = useNavigate();
+    const {name} = useContext(NeriyaAuth)
+  
   useEffect(() => {
-    let token = localStorage.getItem("token");
-
-    if (token !== "admin") {
+    if (name !== "admin") {
       navigate("/login");
     }
   }, []);
